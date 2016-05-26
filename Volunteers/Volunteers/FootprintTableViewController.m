@@ -8,9 +8,8 @@
 
 #import "FootprintTableViewController.h"
 #import "SDRefresh.h"
-//#import "SDTimeLineTableHeaderView.h"
-//#import "SDTimeLineRefreshHeader.h"
-//#import "SDTimeLineRefreshFooter.h"
+#import "RefreshHeader.h"
+#import "RefreshFooter.h"
 #import "FootprintCell.h"
 #import "CellModel.h"
 
@@ -32,8 +31,8 @@ static CGFloat textFieldH = 40;
 @implementation FootprintTableViewController
 
 {
-//    SDTimeLineRefreshFooter *_refreshFooter;
-//    SDTimeLineRefreshHeader *_refreshHeader;
+    RefreshFooter *_refreshFooter;
+    RefreshHeader *_refreshHeader;
     CGFloat _lastScrollViewOffsetY;
     CGFloat _totalKeybordHeight;
 }
@@ -48,50 +47,47 @@ static CGFloat textFieldH = 40;
     __weak typeof(self) weakSelf = self;
     
     
-//    // 上拉加载
-//    _refreshFooter = [SDTimeLineRefreshFooter refreshFooterWithRefreshingText:@"正在加载数据..."];
-//    __weak typeof(_refreshFooter) weakRefreshFooter = _refreshFooter;
-//    [_refreshFooter addToScrollView:self.tableView refreshOpration:^{
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [weakSelf.dataArray addObjectsFromArray:[weakSelf creatModelsWithCount:10]];
-//            [weakSelf.tableView reloadData];
-//            [weakRefreshFooter endRefreshing];
-//        });
-//    }];
+    // 上拉加载
+    _refreshFooter = [RefreshFooter refreshFooterWithRefreshingText:@"正在加载数据..."];
+    __weak typeof(_refreshFooter) weakRefreshFooter = _refreshFooter;
+    [_refreshFooter addToScrollView:self.tableView refreshOpration:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.dataArray addObjectsFromArray:[weakSelf creatModelsWithCount:10]];
+            [weakSelf.tableView reloadData];
+            [weakRefreshFooter endRefreshing];
+        });
+    }];
+
     
-//    SDTimeLineTableHeaderView *headerView = [SDTimeLineTableHeaderView new];
-//    headerView.frame = CGRectMake(0, 0, 0, 260);
-//    self.tableView.tableHeaderView = headerView;
-//    
-//    [self.tableView registerClass:[SDTimeLineCell class] forCellReuseIdentifier:kTimeLineTableViewCellId];
+    [self.tableView registerClass:[FootprintCell class] forCellReuseIdentifier:kTimeLineTableViewCellId];
     
     [self setupTextField];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:animated];
-//    
-//    if (!_refreshHeader.superview) {
-//        
-//        _refreshHeader = [SDTimeLineRefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
-//        _refreshHeader.scrollView = self.tableView;
-//        __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
-//        __weak typeof(self) weakSelf = self;
-//        [_refreshHeader setRefreshingBlock:^{
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                weakSelf.dataArray = [[weakSelf creatModelsWithCount:10] mutableCopy];
-//                [weakHeader endRefreshing];
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [weakSelf.tableView reloadData];
-//                });
-//            });
-//        }];
-//        [self.tableView.superview addSubview:_refreshHeader];
-//    }
-//}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!_refreshHeader.superview) {
+        
+        _refreshHeader = [RefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
+        _refreshHeader.scrollView = self.tableView;
+        __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
+        __weak typeof(self) weakSelf = self;
+        [_refreshHeader setRefreshingBlock:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                weakSelf.dataArray = [[weakSelf creatModelsWithCount:10] mutableCopy];
+                [weakHeader endRefreshing];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.tableView reloadData];
+                });
+            });
+        }];
+        [self.tableView.superview addSubview:_refreshHeader];
+    }
+}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -100,8 +96,8 @@ static CGFloat textFieldH = 40;
 
 - (void)dealloc
 {
-//    [_refreshHeader removeFromSuperview];
-//    [_refreshFooter removeFromSuperview];
+    [_refreshHeader removeFromSuperview];
+    [_refreshFooter removeFromSuperview];
     
     [_textField removeFromSuperview];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -188,9 +184,9 @@ static CGFloat textFieldH = 40;
     NSMutableArray *resArr = [NSMutableArray new];
     
     for (int i = 0; i < count; i++) {
-        int iconRandomIndex = arc4random_uniform(5);
-        int nameRandomIndex = arc4random_uniform(5);
-        int contentRandomIndex = arc4random_uniform(5);
+        int iconRandomIndex = arc4random_uniform(10);
+        int nameRandomIndex = arc4random_uniform(10);
+        int contentRandomIndex = arc4random_uniform(10);
         
         CellModel *model = [CellModel new];
         model.iconName = iconImageNamesArray[iconRandomIndex];
@@ -311,7 +307,7 @@ static CGFloat textFieldH = 40;
 {
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
-    // 适配ios7
+    
     if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait && [[UIDevice currentDevice].systemVersion floatValue] < 8) {
         width = [UIScreen mainScreen].bounds.size.height;
     }
