@@ -15,8 +15,6 @@
 		1C120DBB1CF7041200D833D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C120DB91CF7041200D833D4 /* LaunchScreen.storyboard */; };
 		1C120DC91CF7049600D833D4 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120DC71CF7049600D833D4 /* TaskViewController.m */; };
 		1C120DCA1CF7049600D833D4 /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C120DC81CF7049600D833D4 /* TaskViewController.xib */; };
-		1C120DD61CF704EC00D833D4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120DD41CF704EC00D833D4 /* FriendsViewController.m */; };
-		1C120DD71CF704EC00D833D4 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C120DD51CF704EC00D833D4 /* FriendsViewController.xib */; };
 		1C120DDB1CF704F600D833D4 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120DD91CF704F600D833D4 /* MeViewController.m */; };
 		1C120DDC1CF704F600D833D4 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C120DDA1CF704F600D833D4 /* MeViewController.xib */; };
 		1C120DDF1CF7058B00D833D4 /* FootprintTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120DDE1CF7058B00D833D4 /* FootprintTableViewController.m */; };
@@ -68,6 +66,11 @@
 		1C120E771CF70C1500D833D4 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120E4A1CF70C1500D833D4 /* UIImageView+HighlightedWebCache.m */; };
 		1C120E781CF70C1500D833D4 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120E4C1CF70C1500D833D4 /* UIImageView+WebCache.m */; };
 		1C120E791CF70C1500D833D4 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C120E4E1CF70C1500D833D4 /* UIView+WebCacheOperation.m */; };
+		1C35911F1CFC626E008227C2 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C35911E1CFC626E008227C2 /* FriendsTableViewCell.m */; };
+		1C3591221CFC6316008227C2 /* DataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3591211CFC6316008227C2 /* DataGenerator.m */; };
+		1C3591251CFC63E4008227C2 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3591241CFC63E4008227C2 /* ContactModel.m */; };
+		1C3591281CFC6598008227C2 /* FriendsSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */; };
+		1C35912B1CFC6769008227C2 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */; };
 		1C97C4791CF723830094636B /* BaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C4781CF723830094636B /* BaseRefreshView.m */; };
 		1C97C47F1CF723C10094636B /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C47E1CF723C10094636B /* RefreshHeader.m */; };
 		1C97C4821CF72AAE0094636B /* RefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C4811CF72AAE0094636B /* RefreshFooter.m */; };
@@ -87,9 +90,6 @@
 		1C120DC61CF7049600D833D4 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
 		1C120DC71CF7049600D833D4 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		1C120DC81CF7049600D833D4 /* TaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskViewController.xib; sourceTree = "<group>"; };
-		1C120DD31CF704EC00D833D4 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
-		1C120DD41CF704EC00D833D4 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
-		1C120DD51CF704EC00D833D4 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		1C120DD81CF704F600D833D4 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		1C120DD91CF704F600D833D4 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		1C120DDA1CF704F600D833D4 /* MeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
@@ -190,6 +190,16 @@
 		1C120E4D1CF70C1500D833D4 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		1C120E4E1CF70C1500D833D4 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		1C120E7A1CF70C5A00D833D4 /* GlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefines.h; sourceTree = "<group>"; };
+		1C35911D1CFC626E008227C2 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		1C35911E1CFC626E008227C2 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		1C3591201CFC6316008227C2 /* DataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGenerator.h; sourceTree = "<group>"; };
+		1C3591211CFC6316008227C2 /* DataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataGenerator.m; sourceTree = "<group>"; };
+		1C3591231CFC63E4008227C2 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
+		1C3591241CFC63E4008227C2 /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
+		1C3591261CFC6598008227C2 /* FriendsSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsSearchResultController.h; sourceTree = "<group>"; };
+		1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsSearchResultController.m; sourceTree = "<group>"; };
+		1C3591291CFC6769008227C2 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
 		1C97C4771CF723830094636B /* BaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRefreshView.h; sourceTree = "<group>"; };
 		1C97C4781CF723830094636B /* BaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRefreshView.m; sourceTree = "<group>"; };
 		1C97C47D1CF723C10094636B /* RefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeader.h; sourceTree = "<group>"; };
@@ -288,9 +298,16 @@
 		1C120DC41CF7044A00D833D4 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				1C120DD31CF704EC00D833D4 /* FriendsViewController.h */,
-				1C120DD41CF704EC00D833D4 /* FriendsViewController.m */,
-				1C120DD51CF704EC00D833D4 /* FriendsViewController.xib */,
+				1C3591201CFC6316008227C2 /* DataGenerator.h */,
+				1C3591211CFC6316008227C2 /* DataGenerator.m */,
+				1C3591231CFC63E4008227C2 /* ContactModel.h */,
+				1C3591241CFC63E4008227C2 /* ContactModel.m */,
+				1C35911D1CFC626E008227C2 /* FriendsTableViewCell.h */,
+				1C35911E1CFC626E008227C2 /* FriendsTableViewCell.m */,
+				1C3591261CFC6598008227C2 /* FriendsSearchResultController.h */,
+				1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */,
+				1C3591291CFC6769008227C2 /* FriendsTableViewController.h */,
+				1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -557,7 +574,6 @@
 				1C120E651CF70C1500D833D4 /* sdRefeshView_arrow@2x.png in Resources */,
 				1C120DBB1CF7041200D833D4 /* LaunchScreen.storyboard in Resources */,
 				1C120E511CF70C1500D833D4 /* MLEmoji_ExpressionImage.plist in Resources */,
-				1C120DD71CF704EC00D833D4 /* FriendsViewController.xib in Resources */,
 				1C120DCA1CF7049600D833D4 /* TaskViewController.xib in Resources */,
 				1C120E5D1CF70C1500D833D4 /* LICENSE in Resources */,
 				1C120DB81CF7041200D833D4 /* Assets.xcassets in Resources */,
@@ -575,7 +591,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C120DD61CF704EC00D833D4 /* FriendsViewController.m in Sources */,
 				1C120E531CF70C1500D833D4 /* NSAttributedString+MLLabel.m in Sources */,
 				1C120E661CF70C1500D833D4 /* SDRefreshFooterView.m in Sources */,
 				1C120E601CF70C1500D833D4 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
@@ -592,6 +607,7 @@
 				1C97C4821CF72AAE0094636B /* RefreshFooter.m in Sources */,
 				1C120E6E1CF70C1500D833D4 /* SDWebImageDecoder.m in Sources */,
 				1C120E5E1CF70C1500D833D4 /* README.md in Sources */,
+				1C3591281CFC6598008227C2 /* FriendsSearchResultController.m in Sources */,
 				1C120E711CF70C1500D833D4 /* SDWebImageManager.m in Sources */,
 				1C120E5A1CF70C1500D833D4 /* MLLabelLayoutManager.m in Sources */,
 				1C120E691CF70C1500D833D4 /* UIView+SDExtension.m in Sources */,
@@ -605,11 +621,13 @@
 				1C120E6A1CF70C1500D833D4 /* MKAnnotationView+WebCache.m in Sources */,
 				1C120E701CF70C1500D833D4 /* SDWebImageDownloaderOperation.m in Sources */,
 				1C120DE51CF709FA00D833D4 /* FootprintCell.m in Sources */,
+				1C3591251CFC63E4008227C2 /* ContactModel.m in Sources */,
 				1C120DDF1CF7058B00D833D4 /* FootprintTableViewController.m in Sources */,
 				1C120E731CF70C1500D833D4 /* UIButton+WebCache.m in Sources */,
 				1C120DAD1CF7041200D833D4 /* main.m in Sources */,
 				1C120E6F1CF70C1500D833D4 /* SDWebImageDownloader.m in Sources */,
 				1C120E6B1CF70C1500D833D4 /* NSData+ImageContentType.m in Sources */,
+				1C3591221CFC6316008227C2 /* DataGenerator.m in Sources */,
 				1C120E551CF70C1500D833D4 /* NSString+MLLabel.m in Sources */,
 				1C120E521CF70C1500D833D4 /* MLEmojiLabel.m in Sources */,
 				1C120E561CF70C1500D833D4 /* MLExpressionManager.m in Sources */,
@@ -620,6 +638,8 @@
 				1C120E751CF70C1500D833D4 /* UIImage+MultiFormat.m in Sources */,
 				1C120E6D1CF70C1500D833D4 /* SDWebImageCompat.m in Sources */,
 				1C120DE21CF709A300D833D4 /* PhotoContainerView.m in Sources */,
+				1C35911F1CFC626E008227C2 /* FriendsTableViewCell.m in Sources */,
+				1C35912B1CFC6769008227C2 /* FriendsTableViewController.m in Sources */,
 				1C120E541CF70C1500D833D4 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				1C120E671CF70C1500D833D4 /* SDRefreshHeaderView.m in Sources */,
 				1C120DEE1CF70B4200D833D4 /* CellModel.m in Sources */,

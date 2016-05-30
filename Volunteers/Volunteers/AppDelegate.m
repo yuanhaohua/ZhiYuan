@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TaskViewController.h"
 #import "FootprintTableViewController.h"
-#import "FriendsViewController.h"
+#import "FriendsTableViewController.h"
 #import "MeViewController.h"
 @interface AppDelegate ()
 
@@ -26,7 +26,7 @@
     FootprintTableViewController* twoView=[[FootprintTableViewController alloc]init];
     twoView.tabBarItem.title=@"足迹";
     
-    FriendsViewController* threeView=[[FriendsViewController alloc]init];
+    FriendsTableViewController* threeView=[[FriendsTableViewController alloc]init];
     threeView.tabBarItem.title=@"好友";
     
     MeViewController* fourView=[[MeViewController alloc]init];
