@@ -71,6 +71,9 @@
 		1C3591251CFC63E4008227C2 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3591241CFC63E4008227C2 /* ContactModel.m */; };
 		1C3591281CFC6598008227C2 /* FriendsSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */; };
 		1C35912B1CFC6769008227C2 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */; };
+		1C7F7BE91CFD6E3900A150AF /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F7BE81CFD6E3900A150AF /* ChatTableViewController.m */; };
+		1C7F7BEC1CFD6E7200A150AF /* MyChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F7BEB1CFD6E7200A150AF /* MyChatTableViewCell.m */; };
+		1C7F7BEF1CFD6E8300A150AF /* FriendChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7F7BEE1CFD6E8300A150AF /* FriendChatTableViewCell.m */; };
 		1C97C4791CF723830094636B /* BaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C4781CF723830094636B /* BaseRefreshView.m */; };
 		1C97C47F1CF723C10094636B /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C47E1CF723C10094636B /* RefreshHeader.m */; };
 		1C97C4821CF72AAE0094636B /* RefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C97C4811CF72AAE0094636B /* RefreshFooter.m */; };
@@ -200,6 +203,12 @@
 		1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsSearchResultController.m; sourceTree = "<group>"; };
 		1C3591291CFC6769008227C2 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
 		1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
+		1C7F7BE71CFD6E3900A150AF /* ChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewController.h; sourceTree = "<group>"; };
+		1C7F7BE81CFD6E3900A150AF /* ChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewController.m; sourceTree = "<group>"; };
+		1C7F7BEA1CFD6E7200A150AF /* MyChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyChatTableViewCell.h; sourceTree = "<group>"; };
+		1C7F7BEB1CFD6E7200A150AF /* MyChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyChatTableViewCell.m; sourceTree = "<group>"; };
+		1C7F7BED1CFD6E8300A150AF /* FriendChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendChatTableViewCell.h; sourceTree = "<group>"; };
+		1C7F7BEE1CFD6E8300A150AF /* FriendChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendChatTableViewCell.m; sourceTree = "<group>"; };
 		1C97C4771CF723830094636B /* BaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRefreshView.h; sourceTree = "<group>"; };
 		1C97C4781CF723830094636B /* BaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRefreshView.m; sourceTree = "<group>"; };
 		1C97C47D1CF723C10094636B /* RefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeader.h; sourceTree = "<group>"; };
@@ -308,6 +317,12 @@
 				1C3591271CFC6598008227C2 /* FriendsSearchResultController.m */,
 				1C3591291CFC6769008227C2 /* FriendsTableViewController.h */,
 				1C35912A1CFC6769008227C2 /* FriendsTableViewController.m */,
+				1C7F7BE71CFD6E3900A150AF /* ChatTableViewController.h */,
+				1C7F7BE81CFD6E3900A150AF /* ChatTableViewController.m */,
+				1C7F7BED1CFD6E8300A150AF /* FriendChatTableViewCell.h */,
+				1C7F7BEE1CFD6E8300A150AF /* FriendChatTableViewCell.m */,
+				1C7F7BEA1CFD6E7200A150AF /* MyChatTableViewCell.h */,
+				1C7F7BEB1CFD6E7200A150AF /* MyChatTableViewCell.m */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -591,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7F7BEC1CFD6E7200A150AF /* MyChatTableViewCell.m in Sources */,
 				1C120E531CF70C1500D833D4 /* NSAttributedString+MLLabel.m in Sources */,
 				1C120E661CF70C1500D833D4 /* SDRefreshFooterView.m in Sources */,
 				1C120E601CF70C1500D833D4 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
@@ -604,6 +620,7 @@
 				1C120DB01CF7041200D833D4 /* AppDelegate.m in Sources */,
 				1C120E791CF70C1500D833D4 /* UIView+WebCacheOperation.m in Sources */,
 				1C120E631CF70C1500D833D4 /* SDPhotoBrowser.m in Sources */,
+				1C7F7BE91CFD6E3900A150AF /* ChatTableViewController.m in Sources */,
 				1C97C4821CF72AAE0094636B /* RefreshFooter.m in Sources */,
 				1C120E6E1CF70C1500D833D4 /* SDWebImageDecoder.m in Sources */,
 				1C120E5E1CF70C1500D833D4 /* README.md in Sources */,
@@ -632,6 +649,7 @@
 				1C120E521CF70C1500D833D4 /* MLEmojiLabel.m in Sources */,
 				1C120E561CF70C1500D833D4 /* MLExpressionManager.m in Sources */,
 				1C120E761CF70C1500D833D4 /* UIImage+WebP.m in Sources */,
+				1C7F7BEF1CFD6E8300A150AF /* FriendChatTableViewCell.m in Sources */,
 				1C120DEB1CF70B2700D833D4 /* CellOperationMenu.m in Sources */,
 				1C120DE81CF70A1600D833D4 /* CellCommentView.m in Sources */,
 				1C120E721CF70C1500D833D4 /* SDWebImagePrefetcher.m in Sources */,

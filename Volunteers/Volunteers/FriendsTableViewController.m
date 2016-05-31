@@ -122,7 +122,7 @@
     
     NSMutableArray *operrationModels = [NSMutableArray new];
     NSArray *dicts = @[@{@"name" : @"福利机构", @"imageName" : @"plugins_FriendNotify"},
-                       @{@"name" : @"备忘录", @"imageName" : @"add_friend_icon_addgroup"},
+                       @{@"name" : @"备忘录 ", @"imageName" : @"add_friend_icon_addgroup"},
                        @{@"name" : @"发起群聊", @"imageName" : @"add_friend_icon_offical"}];
     for (NSDictionary *dict in dicts) {
         ContactModel *model = [ContactModel new];
