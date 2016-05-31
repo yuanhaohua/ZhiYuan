@@ -1,18 +1,18 @@
 //
-//  MeViewController.m
-//  Volunteers
+//  RegisterViewController.m
+//  Volunteer
 //
-//  Created by yuan on 16/5/26.
-//  Copyright © 2016年 yuan. All rights reserved.
+//  Created by l k j y on 16/5/30.
+//  Copyright © 2016年 康康. All rights reserved.
 //
 
-#import "MeViewController.h"
+#import "RegisterViewController.h"
 
-@interface MeViewController ()
+@interface RegisterViewController ()
 
 @end
 
-@implementation MeViewController
+@implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
