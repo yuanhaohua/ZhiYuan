@@ -7,10 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "AppConfigure.h"
+#import "NavigationBar.h"
+#import "Constants.h"
 #import "TaskViewController.h"
 #import "FootprintTableViewController.h"
 #import "FriendsTableViewController.h"
-#import "MeViewController.h"
+#import "PersonViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -29,8 +32,11 @@
     FriendsTableViewController* threeView=[[FriendsTableViewController alloc]init];
     threeView.tabBarItem.title=@"好友";
     
-    MeViewController* fourView=[[MeViewController alloc]init];
+    PersonViewController* fourView=[[PersonViewController alloc]init];
     fourView.tabBarItem.title=@"我的";
+    
+    UINavigationController *personNavigationController = [self navigationController];
+    [personNavigationController setViewControllers:@[fourView]];
     
     UITabBarController * tabBar=[[UITabBarController alloc]init];
     
@@ -47,12 +53,21 @@
     fourView.tabBarItem=barItem4;
     [tabBar viewControllers];
     
-    tabBar.viewControllers=@[oneView,twoView,threeView,fourView];
+    tabBar.viewControllers=@[oneView,twoView,threeView,personNavigationController];
     
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController=tabBar;
 
     return YES;
+}
+
+- (UINavigationController *)navigationController
+{
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[NavigationBar class] toolbarClass:nil];
+    [navigationController.navigationBar setOpaque:YES];
+    navigationController.navigationBar.tintColor = [UIColor colorWithRed:100 / 255.0 green:100 / 255.0 blue:100 / 255.0 alpha:229 / 255.0];
+    
+    return navigationController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
